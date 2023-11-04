@@ -15,6 +15,9 @@ func searchStr(content string, startStr string) bool {
 			} else {
 				helpLen++
 				i++
+				if i == len(content) {
+					return false
+				}
 				if helpLen == len(startStr) && j == (len(startStr)-1) {
 					return true
 				}
