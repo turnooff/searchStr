@@ -7,5 +7,10 @@ import (
 )
 
 func main() {
-	fmt.Println(searchstring.Contains("test.txt", "qwerty"))
+	flag, err := searchstring.Contains("test.txt", "qwerty")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(flag)
 }
